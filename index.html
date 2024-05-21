@@ -8,8 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
@@ -20,18 +20,27 @@
             padding: 2em;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 2em;
         }
         h1 {
             color: #333;
         }
+        .bottom-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+        }
     </style>
 </head>
 <body>
-    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.31.4/gradio.js"></script>
-    <gradio-app src="https://df-wang-egc.hf.space"></gradio-app>
-
     <div class="container">
         <h1>Welcome to try our early gastric cancer segmentation model</h1>
+    </div>
+
+    <div class="bottom-content">
+        <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.31.4/gradio.js"></script>
+        <gradio-app src="https://df-wang-egc.hf.space"></gradio-app>
     </div>
 </body>
 </html>
